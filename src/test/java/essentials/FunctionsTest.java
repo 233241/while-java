@@ -1,9 +1,8 @@
-package test;
+package essentials;
 
-import essentials.Functions;
 import lexer.factory.ArithmeticFactory;
-import lexer.factory.EssentialFactory;
 import org.junit.Assert;
+import org.junit.Test;
 import parser.arithmetic.IntegerToken;
 import parser.essentials.IToken;
 import java.util.ArrayList;
@@ -16,41 +15,47 @@ import static essentials.Functions.convert;
  * @author m
  */
 public class FunctionsTest {
-    @org.junit.Test
+    @Test(expected = NullPointerException.class)
     public void convertNullTest() {
         String text = null;
-        List<Character> list = convert(text);
-        Assert.assertEquals(list, null);
+
+        convert(text);
     }
 
-    @org.junit.Test
+    @Test
     public void convertEmptyTest() {
         String text = "";
+
         List<Character> list = convert(text);
+
         Assert.assertTrue(list.isEmpty());
     }
 
-    @org.junit.Test
+    @Test
     public void convertNormalTest() {
         String text = " /n  a*9 (b cd ";
-        List<Character> list = convert(text);
 
-        Assert.assertEquals(text.length(), list.size());
-        for (int i = 0; i < text.length(); i++) {
-            Character ch = text.toCharArray()[i];
-            Assert.assertEquals(ch, list.get(i));
-        }
+        List<Character> list = convert(text);
+        String newText = list.stream()
+                .map(String::valueOf)
+                .reduce((a, b) -> a + b)
+                .orElse(null);
+
+        Assert.assertEquals(text, newText);
     }
 
-    @org.junit.Test
+    @Test
     public void mergeEmptyTest() {
         ArithmeticFactory factory = new ArithmeticFactory();
         String tokenType = "VAR";
-        IToken token = Functions.merge(factory, tokenType, new ArrayList<>());
-        Assert.assertEquals(null, token.getValue());
+        List<IToken> tokenList = new ArrayList<>();
+
+        IToken token = Functions.merge(factory, tokenType, tokenList);
+
+        Assert.assertEquals("", token.getValue());
     }
 
-    @org.junit.Test
+    @Test
     public void mergeNormalTest() {
         ArithmeticFactory factory = new ArithmeticFactory();
         String tokenType = "VAR";
@@ -62,8 +67,8 @@ public class FunctionsTest {
             tokens[i].setValue(String.valueOf(i * i));
             list.add(tokens[i]);
         }
-
         IToken token = Functions.merge(factory, tokenType, list);
+
         Assert.assertEquals("014916", token.getValue());
     }
 }

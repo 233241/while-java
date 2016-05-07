@@ -5,7 +5,7 @@ package parser.essentials;
  *
  * @author m
  */
-public class Token implements IToken {
+public abstract class Token implements IToken {
     private String value;
 
     @Override
@@ -18,6 +18,7 @@ public class Token implements IToken {
         value = newValue;
     }
 
+    // TODO: 08.05.16 remove after tests all lexer
     @Override
     public String toString() {
         return getClass().getSimpleName() + "[" + value + "]";

@@ -7,5 +7,5 @@ import parser.essentials.Token;
  *
  * @author m
  */
-public class MultToken extends Token {
+public class MulToken extends Token {
 }

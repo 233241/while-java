@@ -13,5 +13,4 @@ import java.util.List;
 public interface IToken {
     String getValue();
     void setValue(String newValue);
-
 }

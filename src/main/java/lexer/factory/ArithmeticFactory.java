@@ -19,8 +19,8 @@ public class ArithmeticFactory implements IFactory<IToken> {
                 return new AddToken();
             case "SUB":
                 return new SubToken();
-            case "MULT":
-                return new MultToken();
+            case "MUL":
+                return new MulToken();
             case "DIV":
                 return new DivToken();
             case "MOD":

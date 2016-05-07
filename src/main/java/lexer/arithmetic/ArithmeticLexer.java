@@ -2,7 +2,6 @@ package lexer.arithmetic;
 
 import lexer.essentials.DecoratedLexer;
 import lexer.essentials.OrLexer;
-import lexer.essentials.WhileLexer;
 
 /**
  * Created on 01.05.16.
@@ -17,7 +16,7 @@ public class ArithmeticLexer extends DecoratedLexer {
                 new IntegerLexer(),
                 new LeftBracketLexer(),
                 new ModLexer(),
-                new MultLexer(),
+                new MulLexer(),
                 new RightBracketLexer(),
                 new SubLexer(),
                 new VariableLexer()));
