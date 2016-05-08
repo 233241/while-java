@@ -1,7 +1,7 @@
 package lexer.arithmetic;
 
+import lexer.essentials.CharsSequenceLexer;
 import lexer.essentials.DecoratedLexer;
-import lexer.essentials.SingleCharLexer;
 import lexer.factory.ArithmeticFactory;
 
 /**
@@ -11,6 +11,6 @@ import lexer.factory.ArithmeticFactory;
  */
 public class MulLexer extends DecoratedLexer {
     public MulLexer() {
-        super(new SingleCharLexer('*', new ArithmeticFactory(), "MUL"));
+        super(new CharsSequenceLexer("*", new ArithmeticFactory(), "MUL"));
     }
 }

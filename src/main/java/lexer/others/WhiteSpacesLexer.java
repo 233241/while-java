@@ -1,6 +1,11 @@
-package lexer.essentials;
+package lexer.others;
 
+import lexer.essentials.AndLexer;
+import lexer.essentials.CharLexer;
+import lexer.essentials.DecoratedMergedLexer;
+import lexer.essentials.WhileLexer;
 import lexer.factory.EssentialFactory;
+import lexer.factory.OthersFactory;
 
 /**
  * Created on 30.04.16.
@@ -10,9 +15,9 @@ import lexer.factory.EssentialFactory;
 public class WhiteSpacesLexer extends DecoratedMergedLexer {
     public WhiteSpacesLexer() {
         super(new AndLexer(
-                new CharLexer(Character::isWhitespace, new EssentialFactory(), "SPACE"),
+                new CharLexer(Character::isWhitespace, new OthersFactory(), "SPACE"),
                 new WhileLexer(
-                        new CharLexer(Character::isWhitespace, new EssentialFactory(), "SPACE"))), new EssentialFactory(), "SPACE");
+                        new CharLexer(Character::isWhitespace, new OthersFactory(), "SPACE"))), new OthersFactory(), "SPACE");
     }
 
 //    @Override

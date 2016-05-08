@@ -1,4 +1,6 @@
-package parser.essentials;
+package parser.others;
+
+import parser.essentials.Token;
 
 /**
  * Created on 30.04.16.

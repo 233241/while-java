@@ -1,5 +1,6 @@
 package lexer.arithmetic;
 
+import lexer.essentials.CharsSequenceLexer;
 import lexer.essentials.DecoratedLexer;
 import lexer.essentials.SingleCharLexer;
 import lexer.factory.ArithmeticFactory;
@@ -12,6 +13,6 @@ import parser.arithmetic.ModToken;
  */
 public class ModLexer extends DecoratedLexer {
     public ModLexer() {
-        super(new SingleCharLexer('%', new ArithmeticFactory(), "MOD"));
+        super(new CharsSequenceLexer("%", new ArithmeticFactory(), "MOD"));
     }
 }

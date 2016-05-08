@@ -1,5 +1,6 @@
 package lexer.others;
 
+import lexer.essentials.CharsSequenceLexer;
 import lexer.essentials.DecoratedLexer;
 import lexer.essentials.SingleCharLexer;
 import lexer.factory.ArithmeticFactory;
@@ -13,6 +14,6 @@ import lexer.factory.OthersFactory;
  */
 public class RightParenthesisLexer extends DecoratedLexer {
     public RightParenthesisLexer() {
-        super(new SingleCharLexer(')', new OthersFactory(), "RIGHT_PARENTHESIS"));
+        super(new CharsSequenceLexer(")", new OthersFactory(), "RIGHT_PARENTHESIS"));
     }
 }

@@ -1,5 +1,6 @@
 package lexer.arithmetic;
 
+import lexer.essentials.CharsSequenceLexer;
 import lexer.essentials.DecoratedLexer;
 import lexer.essentials.SingleCharLexer;
 import lexer.factory.ArithmeticFactory;
@@ -12,6 +13,6 @@ import parser.arithmetic.SubToken;
  */
 public class SubLexer extends DecoratedLexer {
     protected SubLexer() {
-        super(new SingleCharLexer('-', new ArithmeticFactory(), "SUB"));
+        super(new CharsSequenceLexer("-", new ArithmeticFactory(), "SUB"));
     }
 }

@@ -1,7 +1,7 @@
 //package test.lexer;
 //
 //import essentials.Pair;
-//import lexer.essentials.WhiteSpacesLexer;
+//import lexer.others.WhiteSpacesLexer;
 //import org.junit.Assert;
 //import parser.essentials.IToken;
 //

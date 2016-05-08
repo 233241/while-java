@@ -1,5 +1,6 @@
 package lexer.arithmetic;
 
+import lexer.essentials.CharsSequenceLexer;
 import lexer.essentials.DecoratedLexer;
 import lexer.essentials.SingleCharLexer;
 import lexer.factory.ArithmeticFactory;
@@ -12,6 +13,6 @@ import parser.arithmetic.DivToken;
  */
 public class DivLexer extends DecoratedLexer {
     public DivLexer() {
-        super(new SingleCharLexer('/', new ArithmeticFactory(), "DIV"));
+        super(new CharsSequenceLexer("/", new ArithmeticFactory(), "DIV"));
     }
 }

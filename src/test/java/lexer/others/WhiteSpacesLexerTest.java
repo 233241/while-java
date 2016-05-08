@@ -1,8 +1,7 @@
-package lexer.essentials;
+package lexer.others;
 
 import lexer.AbstractLexerTest;
-
-import static org.junit.Assert.*;
+import lexer.others.WhiteSpacesLexer;
 
 /**
  * Created on 08.05.16.

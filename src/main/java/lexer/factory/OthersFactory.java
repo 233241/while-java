@@ -1,8 +1,9 @@
 package lexer.factory;
 
 import parser.essentials.IToken;
-import parser.essentials.LeftParenthesisToken;
-import parser.essentials.RightParenthesisToken;
+import parser.others.LeftParenthesisToken;
+import parser.others.RightParenthesisToken;
+import parser.others.WhiteSpacesToken;
 import parser.statement.VariableToken;
 
 /**
@@ -14,6 +15,8 @@ public class OthersFactory implements IFactory<IToken> {
     @Override
     public IToken make(String name) {
         switch (name) {
+            case "SPACE":
+                return new WhiteSpacesToken();
             case "LEFT_PARENTHESIS":
                 return new LeftParenthesisToken();
             case "RIGHT_PARENTHESIS":

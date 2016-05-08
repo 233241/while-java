@@ -2,6 +2,7 @@ package lexer;
 
 import lexer.arithmetic.ArithmeticLexer;
 import lexer.essentials.*;
+import lexer.others.OthersLexer;
 
 /**
  * Created on 01.05.16.
@@ -13,6 +14,6 @@ public class Lexer extends DecoratedLexer {
         super(new WhileLexer(
                 new OrLexer(
                         new ArithmeticLexer(),
-                        new EssentialLexer())));
+                        new OthersLexer())));
     }
 }

@@ -52,7 +52,9 @@ public class Main {
 //main.java.lexer.lexer
 //main.java.lexer.simplelexer
 
-// TODO: 08.05.16 przeniesc variable i variableTest do statement i zatwierdzic zmiany dla fabryk arithmetic i statement
+// TODO: 08.05.16 dodac potegowanie
+// TODO: 08.05.16 dodac inkrementacje i dekrementacje
+// TODO: 08.05.16 przeniesc variable i variableTest do statements i zatwierdzic zmiany dla fabryk arithmetic i statements
 // TODO: 08.05.16 if then czy jeszcze if then else, czy if jest lewo czy prawostronny
 // TODO: 08.05.16 czy dodawac instrukcje SKIP
 // TODO: 08.05.16 czy double + int powinno sie interpretowac ? czyli czy rzutownie ma byc jawne (funkcje konwertujace dla uzytkownika) czy niejawne

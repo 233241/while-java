@@ -1,5 +1,6 @@
 package lexer.arithmetic;
 
+import lexer.essentials.CharsSequenceLexer;
 import lexer.essentials.DecoratedLexer;
 import lexer.essentials.SingleCharLexer;
 import lexer.factory.ArithmeticFactory;
@@ -11,6 +12,6 @@ import lexer.factory.ArithmeticFactory;
  */
 public class AddLexer extends DecoratedLexer {
     public AddLexer() {
-        super(new SingleCharLexer('+', new ArithmeticFactory(), "ADD"));
+        super(new CharsSequenceLexer("+", new ArithmeticFactory(), "ADD"));
     }
 }

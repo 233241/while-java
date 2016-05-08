@@ -17,7 +17,7 @@ import java.util.List;
 public class IntegerLexer extends DecoratedMergedLexer {
     public IntegerLexer() {
         super(new OrLexer(
-                        new SingleCharLexer('0', new ArithmeticFactory(), "INT"),
+                        new CharsSequenceLexer("0", new ArithmeticFactory(), "INT"),
                         new AndLexer(
                                 new CharLexer((c) -> c >= '1' && c <= '9', new ArithmeticFactory(), "INT"),
                                 new WhileLexer(
