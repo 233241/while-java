@@ -52,6 +52,8 @@ public class Main {
 //main.java.lexer.lexer
 //main.java.lexer.simplelexer
 
+// TODO: 08.05.16 uzupelnic brakujace testy i dokumentacje
+// TODO: 08.05.16 moze warto pozniej rozwazyc dodanie do WhileLexer argumentow min i max ?
 // TODO: 08.05.16 dodac potegowanie
 // TODO: 08.05.16 dodac inkrementacje i dekrementacje
 // TODO: 08.05.16 przeniesc variable i variableTest do statements i zatwierdzic zmiany dla fabryk arithmetic i statements

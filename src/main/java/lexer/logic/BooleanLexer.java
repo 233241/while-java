@@ -17,3 +17,21 @@ public class BooleanLexer extends DecoratedLexer {
                 new CharsSequenceLexer("FALSE", new LogicFactory(), "BOOL")));
     }
 }
+
+
+// TODO: 08.05.16  ==
+// TODO: 08.05.16  !=
+// TODO: 08.05.16  <
+// TODO: 08.05.16  <=
+// TODO: 08.05.16  >
+// TODO: 08.05.16  >=
+// TODO: 08.05.16  &&
+// TODO: 08.05.16  ||
+// TODO: 08.05.16 LogicLexer
+// TODO: 08.05.16
+// TODO: 08.05.16 test
+// TODO: 08.05.16 lexer
+// TODO: 08.05.16 fabryka
+// TODO: 08.05.16
+// TODO: 08.05.16  pamietac o kolejnosci np. aby lexer <= byl przed <, ++ przed + czyli lekser bedzie zachlanny
+
