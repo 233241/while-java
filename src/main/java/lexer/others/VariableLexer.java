@@ -1,7 +1,8 @@
-package lexer.arithmetic;
+package lexer.others;
 
 import lexer.essentials.*;
 import lexer.factory.ArithmeticFactory;
+import lexer.factory.OthersFactory;
 
 /**
  * Created on 30.04.16.
@@ -11,11 +12,11 @@ import lexer.factory.ArithmeticFactory;
 public class VariableLexer extends DecoratedMergedLexer {
     public VariableLexer() {
         super(new AndLexer(
-                new CharLexer(Character::isLowerCase, new ArithmeticFactory(), "VAR"),
+                new CharLexer(Character::isLowerCase, new OthersFactory(), "VAR"),
                 new WhileLexer(
                         new OrLexer(
-                                new CharLexer(Character::isAlphabetic, new ArithmeticFactory(), "VAR"),
-                                new CharLexer(Character::isDigit, new ArithmeticFactory(), "VAR")))), new ArithmeticFactory(), "VAR");
+                                new CharLexer(Character::isAlphabetic, new OthersFactory(), "VAR"),
+                                new CharLexer(Character::isDigit, new OthersFactory(), "VAR")))), new OthersFactory(), "VAR");
     }
 
 //    @Override

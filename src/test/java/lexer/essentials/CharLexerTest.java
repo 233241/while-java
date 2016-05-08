@@ -2,6 +2,7 @@ package lexer.essentials;
 
 import lexer.LexerTester;
 import lexer.factory.ArithmeticFactory;
+import lexer.factory.OthersFactory;
 import org.junit.Test;
 
 /**
@@ -10,9 +11,9 @@ import org.junit.Test;
  * @author m
  */
 public class CharLexerTest {
-    private ILexer LEXER_DIGIT = new CharLexer(Character::isDigit, new ArithmeticFactory(), "VAR");
-    private ILexer LEXER_WHITESPACE = new CharLexer(Character::isWhitespace, new ArithmeticFactory(), "VAR");
-    private ILexer LEXER_A = new CharLexer(c -> c == 'A', new ArithmeticFactory(), "VAR");
+    private ILexer LEXER_DIGIT = new CharLexer(Character::isDigit, new OthersFactory(), "VAR");
+    private ILexer LEXER_WHITESPACE = new CharLexer(Character::isWhitespace, new OthersFactory(), "VAR");
+    private ILexer LEXER_A = new CharLexer(c -> c == 'A', new OthersFactory(), "VAR");
 
     private String[] POSITIVE_TESTS_DIGIT = new String[] {"1 ", "34s fg", "3"};
     private String[] NEGATIVE_TESTS_DIGIT = new String[] {"", "a", " 45"};

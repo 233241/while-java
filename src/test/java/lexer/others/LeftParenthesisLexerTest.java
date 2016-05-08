@@ -1,17 +1,15 @@
-package lexer.arithmetic;
+package lexer.others;
 
 import lexer.AbstractLexerTest;
-
-import static org.junit.Assert.*;
 
 /**
  * Created on 08.05.16.
  *
  * @author m
  */
-public class LeftBracketLexerTest extends AbstractLexerTest {
-    public LeftBracketLexerTest() {
-        LEXER = new LeftBracketLexer();
+public class LeftParenthesisLexerTest extends AbstractLexerTest {
+    public LeftParenthesisLexerTest() {
+        LEXER = new LeftParenthesisLexer();
         NEGATIVE_TESTS = new String[] {"", "a", " ", ")+ ", "0++"};
         POSITIVE_TESTS = new String[] {"(", "(-+", "((45%% as", "( "};
         VALUES = new String[] {"(", "(", "(", "("};

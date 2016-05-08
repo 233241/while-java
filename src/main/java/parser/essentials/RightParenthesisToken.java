@@ -5,5 +5,5 @@ package parser.essentials;
  *
  * @author m
  */
-public class RightBracketToken extends Token {
+public class RightParenthesisToken extends Token {
 }

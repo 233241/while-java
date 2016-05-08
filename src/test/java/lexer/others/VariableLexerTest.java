@@ -1,6 +1,7 @@
-package lexer.arithmetic;
+package lexer.others;
 
 import lexer.AbstractLexerTest;
+import lexer.others.VariableLexer;
 
 /**
  * Created on 08.05.16.

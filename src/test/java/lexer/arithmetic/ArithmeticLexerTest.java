@@ -10,10 +10,9 @@ import lexer.AbstractLexerTest;
 public class ArithmeticLexerTest extends AbstractLexerTest {
     public ArithmeticLexerTest() {
         LEXER = new ArithmeticLexer();
-        NEGATIVE_TESTS = new String[]{""};//{"", "1", "2 +", "/ ", "a 6", "_    4a/ "};
-        POSITIVE_TESTS = new String[]{};//{" ", "\t", "\n", " \te", "  r ", "   \n "};
-        VALUES = new String[]{};//{" ", "\t", "\n", " \t", "  ", "   \n "};
-        RESTS = new String[]{};//{"", "", "", "e", "r ", ""};
+        NEGATIVE_TESTS = new String[]{"", " a", "var", "(", ") 3", "e4+"};
+        POSITIVE_TESTS = new String[]{"34sd+", "+1- 3", "*+d\n", "-2(4)"};
+        VALUES = new String[]{"34", "+", "*", "-"};
+        RESTS = new String[]{"sd+", "1- 3", "+d\n", "2(4)"};
     }
 }
-// TODO: 08.05.16 po przeniesieniu var i bracketow do others zmienic testy

@@ -1,6 +1,8 @@
 package essentials;
 
 import lexer.factory.ArithmeticFactory;
+import lexer.factory.IFactory;
+import lexer.factory.OthersFactory;
 import org.junit.Assert;
 import org.junit.Test;
 import parser.arithmetic.IntegerToken;
@@ -46,7 +48,7 @@ public class FunctionsTest {
 
     @Test
     public void mergeEmptyTest() {
-        ArithmeticFactory factory = new ArithmeticFactory();
+        IFactory<IToken> factory = new OthersFactory();
         String tokenType = "VAR";
         List<IToken> tokenList = new ArrayList<>();
 
@@ -57,7 +59,7 @@ public class FunctionsTest {
 
     @Test
     public void mergeNormalTest() {
-        ArithmeticFactory factory = new ArithmeticFactory();
+        IFactory<IToken> factory = new OthersFactory();
         String tokenType = "VAR";
         List<IToken> list = new ArrayList<>();
 
