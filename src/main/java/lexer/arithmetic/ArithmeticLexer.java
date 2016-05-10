@@ -19,6 +19,7 @@ public class ArithmeticLexer extends DecoratedLexer {
                 new IntegerLexer(),
                 new ModLexer(),
                 new MulLexer(),
+                new PowLexer(),
                 new SubLexer()));
     }
 }

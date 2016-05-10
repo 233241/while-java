@@ -10,8 +10,8 @@ import lexer.factory.LogicFactory;
  *
  * @author m
  */
-public class BooleanLexer extends DecoratedLexer {
-    public BooleanLexer() {
+public class BoolLexer extends DecoratedLexer {
+    public BoolLexer() {
         super(new OrLexer(
                 new CharsSequenceLexer("TRUE", new LogicFactory(), "BOOL"),
                 new CharsSequenceLexer("FALSE", new LogicFactory(), "BOOL")));
@@ -20,18 +20,50 @@ public class BooleanLexer extends DecoratedLexer {
 
 
 // TODO: 08.05.16  ==
+//lexer
+//token
+//factory
+//booleanLexer
 // TODO: 08.05.16  !=
+//lexer
+//token
+//factory
+//booleanLexer
 // TODO: 08.05.16  <
+//lexer
+//token
+//factory
+//booleanLexer
 // TODO: 08.05.16  <=
+//lexer
+//token
+//factory
+//booleanLexer
 // TODO: 08.05.16  >
+//lexer
+//token
+//factory
+//booleanLexer
 // TODO: 08.05.16  >=
+//lexer
+//token
+//factory
+//booleanLexer
 // TODO: 08.05.16  &&
+//lexer
+//token
+//factory
+//booleanLexer
 // TODO: 08.05.16  ||
+//lexer
+//token
+//factory
+//booleanLexer
 // TODO: 08.05.16 LogicLexer
-// TODO: 08.05.16
-// TODO: 08.05.16 test
-// TODO: 08.05.16 lexer
-// TODO: 08.05.16 fabryka
-// TODO: 08.05.16
+//lexer
+//token
+//factory
+//booleanLexer
+// TODO: 08.05.16 booleanLexer
 // TODO: 08.05.16  pamietac o kolejnosci np. aby lexer <= byl przed <, ++ przed + czyli lekser bedzie zachlanny
 

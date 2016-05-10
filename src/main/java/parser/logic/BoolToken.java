@@ -7,5 +7,5 @@ import parser.essentials.Token;
  *
  * @author m
  */
-public class LogicAndToken extends Token {
+public class BoolToken extends Token {
 }

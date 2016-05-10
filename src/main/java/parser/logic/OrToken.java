@@ -7,5 +7,5 @@ import parser.essentials.Token;
  *
  * @author m
  */
-public class LogicOrToken extends Token {
+public class OrToken extends Token {
 }
