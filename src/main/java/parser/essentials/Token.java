@@ -1,12 +1,24 @@
 package parser.essentials;
 
+import main.TokenType;
+
 /**
  * Created on 29.04.16.
  *
  * @author m
  */
-public abstract class Token implements IToken {
+public class Token implements IToken {
+    private TokenType type;
     private String value;
+
+    public Token(TokenType type, String value) {
+        this.type = type;
+        this.value = value;
+    }
+
+    public TokenType getType() {
+        return type;
+    }
 
     @Override
     public String getValue() {
@@ -18,9 +30,11 @@ public abstract class Token implements IToken {
         value = newValue;
     }
 
-    // TODO: 08.05.16 remove after tests all lexer
     @Override
     public String toString() {
-        return getClass().getSimpleName() + "[" + value + "]";
+        return "Token{" +
+                "type=" + type +
+                ", value='" + value + '\'' +
+                '}';
     }
 }

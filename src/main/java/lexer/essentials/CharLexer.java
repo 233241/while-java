@@ -1,9 +1,9 @@
 package lexer.essentials;
 
 import essentials.Pair;
-import lexer.factory.IFactory;
+import lexer.TokenFactory;
+import main.TokenType;
 import parser.essentials.IToken;
-import parser.essentials.Token;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Predicate;
@@ -15,18 +15,16 @@ import java.util.function.Predicate;
  */
 public class CharLexer implements ILexer {
     private final Predicate<Character> predicate;
-    private final IFactory<IToken> factory;
-    private final String tokenName;
+    private final TokenType type;
 
     /**
      * @param predicate predicate which token have to matches
-     * @param factory factory able to create token of type tokenType
-     * @param tokenName type of returned token
+//     * @param factory factory able to create token of type tokenType
+     * @param type type of returned token
      */
-    public CharLexer(Predicate<Character> predicate, IFactory<IToken> factory, String tokenName) {
+    public CharLexer(Predicate<Character> predicate, TokenType type) {
         this.predicate = predicate;
-        this.factory = factory;
-        this.tokenName = tokenName;
+        this.type = type;
     }
 
     /**
@@ -55,8 +53,7 @@ public class CharLexer implements ILexer {
      */
     private List<IToken> produceList(Character ch) {
         List<IToken> list = new ArrayList<>();
-        IToken token = factory.make(tokenName);
-        token.setValue(String.valueOf(ch));
+        IToken token = TokenFactory.make(type, String.valueOf(ch));
         list.add(token);
         return list;
     }

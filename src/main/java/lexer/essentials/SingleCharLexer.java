@@ -1,7 +1,6 @@
 package lexer.essentials;
 
-import lexer.factory.IFactory;
-import parser.essentials.IToken;
+import main.TokenType;
 
 /**
  * Created on 30.04.16.
@@ -9,7 +8,7 @@ import parser.essentials.IToken;
  * @author m
  */
 public class SingleCharLexer extends DecoratedLexer {
-    public SingleCharLexer(Character c, IFactory<IToken> factory, String tokenName) {
-        super(new CharLexer(ch -> c == ch , factory, tokenName));
+    public SingleCharLexer(Character c, TokenType type) {
+        super(new CharLexer(ch -> c == ch, type));
     }
 }

@@ -1,59 +1,27 @@
 package main;
 
-import essentials.Pair;
 import lexer.Lexer;
-import lexer.essentials.ILexer;
 import parser.essentials.IToken;
-import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
-    private final static String TEXT = "12+ 22a7 (     ";
+    private final static String text = "INT n = 10; INT value= 1; WHILE (n>=1) DO     \t {value = value * n;" +
+            "\n   n = n-1;} ";
 
     public static void main(String[] args) {
-        ILexer lexer = new Lexer();
+        Lexer lexer = new Lexer();
+        List<IToken> tokens = lexer.eval(text);
 
-        List<Character> chars = new ArrayList<>();
-        for (char ch : TEXT.toCharArray())
-            chars.add(ch);
-
-        Pair<List<IToken>, List<Character>> tokens = lexer.eval(chars);
-
-        List<Character> rest = tokens.y;
-        if (! rest.isEmpty())
-            System.out.println("REST: " + rest
-                    .stream()
-                    .map(String::valueOf)
-                    .reduce(String::concat));
-
-        System.out.println("TOKENS:");
-        tokens.x.stream().forEach(System.out::println);
+        if (tokens != null) {
+            System.out.println("PARSED:");
+            tokens.stream().forEach(System.out::println);
+        } else {
+            System.out.println("ERROR !!!");
+        }
     }
 }
 
-
-// NOT READY:
-//main.java.lexer.arithmetic.Arithmetic
-
-//main.java.lexer.essentials
-//and
-//decorator
-//decoratorMerged
-//essential
-//or
-//single
-//while
-
-
-//main.java.lexer.factory.arithmetic
-//main.java.lexer.factory.essential
-//main.java.lexer.factory.Ifactory
-
-//main.java.lexer.lexer
-//main.java.lexer.simplelexer
-
 // TODO: 08.05.16  pamietac o kolejnosci np. aby lexer <= byl przed <, ++ przed + czyli lekser bedzie zachlanny
-// TODO: czy naprawde musze uzywac arithmeticLexer, LogicLexer, ... ?
 // TODO: 10.05.16 na razie nie bede ich uzywal, w takim razie potem musze je usunac i testy oczywiscie tez
 // TODO: 08.05.16 uzupelnic brakujace testy i dokumentacje
 // TODO: 08.05.16 moze warto pozniej rozwazyc dodanie do WhileLexer argumentow min i max ?

@@ -33,27 +33,6 @@ public class AndLexer implements ILexer {
             offset = text.size() - result.y.size();
         }
 
-//        for (int i = 0; i < lexers.length; i++) {
-//            Pair<List<IToken>, List<Character>> result = lexers[i].eval(text.subList(i + 1, text.size()));
-//
-//            if (result == null)
-//                return null;
-//
-//            list.addAll(result.getKey());
-//            rest = result.getValue();
-//        }
-
-
-//        for (ILexer lexer : lexers) {
-//            Pair<List<IToken>, List<Character>> result = lexer.eval(rest);
-//
-//            if (result == null)
-//                return null;
-//
-//            list.addAll(result.getKey());
-//            rest = result.getValue();
-//        }
-
         return new Pair<>(list, text.subList(offset, text.size()));
     }
 }

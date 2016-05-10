@@ -2,7 +2,8 @@ package lexer.essentials;
 
 import essentials.Functions;
 import essentials.Pair;
-import lexer.factory.IFactory;
+import lexer.TokenFactory;
+import main.TokenType;
 import parser.essentials.IToken;
 import java.util.ArrayList;
 import java.util.List;
@@ -13,13 +14,11 @@ import java.util.List;
  * @author m
  */
 public abstract class DecoratedMergedLexer extends DecoratedLexer {
-    private final String tokenName;
-    private final IFactory<IToken> factory;
+    private final TokenType type;
 
-    protected DecoratedMergedLexer(ILexer lexer, IFactory<IToken> factory, String tokenName) {
+    protected DecoratedMergedLexer(ILexer lexer, TokenType type) {
         super(lexer);
-        this.factory = factory;
-        this.tokenName = tokenName;
+        this.type = type;
     }
 
     @Override
@@ -29,7 +28,7 @@ public abstract class DecoratedMergedLexer extends DecoratedLexer {
         if (result == null)
             return null;
 
-        IToken token = Functions.merge(factory, tokenName, result.x);
+        IToken token = Functions.merge(type, result.x);
 
         List<IToken> list = new ArrayList<>();
         list.add(token);
