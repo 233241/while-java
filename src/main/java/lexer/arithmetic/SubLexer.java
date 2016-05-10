@@ -12,7 +12,7 @@ import parser.arithmetic.SubToken;
  * @author m
  */
 public class SubLexer extends DecoratedLexer {
-    protected SubLexer() {
+    public SubLexer() {
         super(new CharsSequenceLexer("-", new ArithmeticFactory(), "SUB"));
     }
 }

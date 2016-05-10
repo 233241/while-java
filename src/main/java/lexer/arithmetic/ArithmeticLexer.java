@@ -14,6 +14,7 @@ import lexer.others.VariableLexer;
 public class ArithmeticLexer extends DecoratedLexer {
     public ArithmeticLexer() {
         super(new OrLexer(
+                new SubLexer(),
                 new AddLexer(),
                 new DivLexer(),
                 new IntegerLexer(),

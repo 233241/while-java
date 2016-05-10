@@ -7,9 +7,9 @@ import lexer.AbstractLexerTest;
  *
  * @author m
  */
-public class BoolOrTest extends AbstractLexerTest {
-    public BoolOrTest() {
-        LEXER = new BoolOrLexer();
+public class LogicOrTest extends AbstractLexerTest {
+    public LogicOrTest() {
+        LEXER = new LogicOrLexer();
         NEGATIVE_TESTS = new String[]{"", "a", "|", "|+| ", "0||+!!+"};
         POSITIVE_TESTS = new String[]{"||", "|||", "||+ || && t"};
         VALUES = new String[]{"||", "||", "||"};

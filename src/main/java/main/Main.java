@@ -52,11 +52,12 @@ public class Main {
 //main.java.lexer.lexer
 //main.java.lexer.simplelexer
 
+// TODO: 08.05.16  pamietac o kolejnosci np. aby lexer <= byl przed <, ++ przed + czyli lekser bedzie zachlanny
+// TODO: czy naprawde musze uzywac arithmeticLexer, LogicLexer, ... ?
+// TODO: 10.05.16 na razie nie bede ich uzywal, w takim razie potem musze je usunac i testy oczywiscie tez
 // TODO: 08.05.16 uzupelnic brakujace testy i dokumentacje
 // TODO: 08.05.16 moze warto pozniej rozwazyc dodanie do WhileLexer argumentow min i max ?
-// TODO: 08.05.16 dodac potegowanie
 // TODO: 08.05.16 dodac inkrementacje i dekrementacje
-// TODO: 08.05.16 przeniesc variable i variableTest do statements i zatwierdzic zmiany dla fabryk arithmetic i statements
 // TODO: 08.05.16 if then czy jeszcze if then else, czy if jest lewo czy prawostronny
 // TODO: 08.05.16 czy dodawac instrukcje SKIP
 // TODO: 08.05.16 czy double + int powinno sie interpretowac ? czyli czy rzutownie ma byc jawne (funkcje konwertujace dla uzytkownika) czy niejawne
@@ -64,7 +65,7 @@ public class Main {
 // TODO: 08.05.16 operatory o ustalonych typach argumentow, czyli kazde wyrazenie trzyma swoj typ
 // TODO: 08.05.16 polimorfizm (czyli np + ma liste typow, a nie jeden typ) np. + dziala dla INT, DOUBLE, STRING
 // TODO: 08.05.16 lewostronne i prawostronne operatory
-// TODO: 08.05.16 wyrazenia wieloargumentowe np. 1+2+3+4
+// TODO: 08.05.16 wyrazenia wieloargumentowe np. 1+2+3+4 w parserze
 // TODO: 08.05.16 typy: string, int, double, bool
 // TODO: 08.05.16 funkcje, stos funkcji
 // TODO: 08.05.16 rekursja, stos funkcji

@@ -7,8 +7,8 @@ import lexer.AbstractLexerTest;
  *
  * @author m
  */
-public class BoolLexerTest extends AbstractLexerTest {
-    public BoolLexerTest() {
+public class BoolTest extends AbstractLexerTest {
+    public BoolTest() {
         LEXER = new BoolLexer();
         NEGATIVE_TESTS = new String[]{"", "A", " !", "-+ ", "0+!!+", "T", "TR", "TRU", "FALS", "TRUe", "FALSSE"};
         POSITIVE_TESTS = new String[]{"TRUE", "FALSE", "TRUETRUE", "FALSETRUE", "TRUE4 5-"};

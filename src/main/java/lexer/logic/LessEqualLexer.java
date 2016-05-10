@@ -9,8 +9,8 @@ import lexer.factory.LogicFactory;
  *
  * @author m
  */
-public class BoolOrLexer extends DecoratedLexer {
-    public BoolOrLexer() {
-        super(new CharsSequenceLexer("||", new LogicFactory(), "OR"));
+public class LessEqualLexer extends DecoratedLexer {
+    public LessEqualLexer() {
+        super(new CharsSequenceLexer("<=", new LogicFactory(), "LESS_EQUAL"));
     }
 }

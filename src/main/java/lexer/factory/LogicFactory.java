@@ -24,6 +24,14 @@ public class LogicFactory implements IFactory<IToken> {
                 return new EqualToken();
             case "NOT_EQUAL":
                 return new NotEqualToken();
+            case "LESS":
+                return new LessToken();
+            case "LESS_EQUAL":
+                return new LessEqualToken();
+            case "GREATER":
+                return new GreaterToken();
+            case "GREATER_EQUAL":
+                return new GreaterEqualToken();
             default:
                 throw new IllegalArgumentException("Unknown name");
         }

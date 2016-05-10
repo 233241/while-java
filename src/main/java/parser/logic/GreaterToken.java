@@ -7,5 +7,5 @@ import parser.essentials.Token;
  *
  * @author m
  */
-public class GreaterEqual extends Token {
+public class GreaterToken extends Token {
 }
