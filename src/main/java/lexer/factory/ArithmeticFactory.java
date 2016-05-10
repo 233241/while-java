@@ -20,6 +20,8 @@ public class ArithmeticFactory implements IFactory<IToken> {
                 return new MulToken();
             case "DIV":
                 return new DivToken();
+            case "POW":
+                return new PowToken();
             case "MOD":
                 return new ModToken();
             case "INT":
